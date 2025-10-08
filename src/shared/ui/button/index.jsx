@@ -1,4 +1,4 @@
-export default function Index({children, variant = 'primary', ...props}) {
+export default function Button({children, variant = 'primary', ...props}) {
     const classes = ['btn']
     if (variant !== 'primary')
         classes.push(variant)
