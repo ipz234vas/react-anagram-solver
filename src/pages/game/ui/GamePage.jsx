@@ -1,6 +1,7 @@
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
-import {GameHeader} from "../../../widgets/game-header/index.js";
+import {GameHeader} from "../../../widgets/game-header";
+import {LettersGrid, WordPlaceholder} from "../../../entities/word";
 
 export default function GamePage({onEnd, onHome}) {
     const handleCheck = () => alert('TODO: перевірка відповіді');
@@ -14,15 +15,8 @@ export default function GamePage({onEnd, onHome}) {
             <div className="stack">
                 <GameHeader/>
 
-                <div className="g-word" aria-label="поточне слово">
-                    _ _ _ _ _ _ _ _
-                </div>
-
-                <div className="g-grid" role="list" aria-label="букви">
-                    {letters.map((ch, i) => (
-                        <button key={`${ch}-${i}`} className="g-tile" role="listitem">{ch}</button>
-                    ))}
-                </div>
+                <WordPlaceholder>_ _ _ _ _ _ _ _</WordPlaceholder>
+                <LettersGrid letters={letters} />
 
                 <div className="g-actions">
                     <Button onClick={handleCheck}>Перевірити</Button>
