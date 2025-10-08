@@ -1,6 +1,6 @@
-import '../ResultsPage.css';
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
+import {ScoreSummary} from "../../../widgets/score-summary/index.js";
 
 export default function ResultsPage({score = 120, onRetry, onHome}) {
     const handleRetry = () => (onRetry ? onRetry() : alert('TODO: перезапуск гри'));
@@ -14,10 +14,7 @@ export default function ResultsPage({score = 120, onRetry, onHome}) {
                     <p className="r-sub">Дякуємо за гру!</p>
                 </header>
 
-                <section className="r-scoreCard" aria-label="результат">
-                    <div className="r-scoreLabel">Ваш результат</div>
-                    <div className="r-scoreValue">{score}</div>
-                </section>
+                <ScoreSummary score={score}/>
 
                 <div className="actions">
                     <Button onClick={handleRetry}>Спробувати ще раз</Button>
