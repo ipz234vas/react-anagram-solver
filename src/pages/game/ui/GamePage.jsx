@@ -1,4 +1,3 @@
-import '../GamePage.css';
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
 
@@ -11,7 +10,7 @@ export default function GamePage({onEnd, onHome}) {
 
     return (
         <Layout>
-            <div className="g-stack">
+            <div className="stack">
                 <header className="g-header">
                     <div className="g-score">Рахунок: <strong>0</strong></div>
                     <h1 className="g-title">Anagram</h1>
