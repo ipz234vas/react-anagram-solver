@@ -1,5 +1,6 @@
 import {StartPage} from "../pages/start/";
-import GamePage from "../pages/game/ui/GamePage.jsx";
+import {GamePage} from "../pages/game";
+import {ResultsPage} from "../pages/results";
 
 function App() {
     return (
@@ -8,7 +9,8 @@ function App() {
             {/*    onStart={() => alert("Тут буде перехід до сторінки Game")}*/}
             {/*    onShowRules={() => alert("Правила гри")}*/}
             {/*/>*/}
-            <GamePage/>
+            {/*<GamePage/>*/}
+            <ResultsPage/>
         </>
     )
 }

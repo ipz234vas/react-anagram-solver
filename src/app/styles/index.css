@@ -157,7 +157,7 @@ body {
   }
 }
 
-.g-actions {
+.actions {
   display: flex;
   gap: 8px;
   justify-content: center;
