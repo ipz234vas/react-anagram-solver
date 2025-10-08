@@ -1,10 +1,9 @@
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
-import {GameHeader} from "../../../widgets/game-header";
-import {WordDisplay} from "../../../entities/word";
-import {LettersGrid} from "../../../features/pick-letter";
+import { GameHeader } from '../../../widgets/game-header';
+import { GameArea } from '../../../widgets/game-area';
 
-export default function GamePage({onEnd, onHome}) {
+export default function GamePage({ onEnd, onHome }) {
     const handleCheck = () => alert('TODO: перевірка відповіді');
     const handleEnd = () => (onEnd ? onEnd() : alert('TODO: завершення гри'));
     const handleHome = () => (onHome ? onHome() : alert('TODO: на головну'));
@@ -14,10 +13,12 @@ export default function GamePage({onEnd, onHome}) {
     return (
         <Layout>
             <div className="stack">
-                <GameHeader/>
+                <GameHeader />
 
-                <WordDisplay targetLength={8} currentWord={''}/>
-                <LettersGrid letters={letters}/>
+                <GameArea
+                    word="_ _ _ _ _ _ _ _"
+                    letters={letters}
+                />
 
                 <div className="actions">
                     <Button onClick={handleCheck}>Перевірити</Button>
