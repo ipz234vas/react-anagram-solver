@@ -1,7 +1,8 @@
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
 import {GameHeader} from "../../../widgets/game-header";
-import {LettersGrid, WordDisplay, WordPlaceholder} from "../../../entities/word";
+import {WordDisplay} from "../../../entities/word";
+import {LettersGrid} from "../../../features/pick-letter";
 
 export default function GamePage({onEnd, onHome}) {
     const handleCheck = () => alert('TODO: перевірка відповіді');
@@ -16,7 +17,7 @@ export default function GamePage({onEnd, onHome}) {
                 <GameHeader/>
 
                 <WordDisplay targetLength={8} currentWord={''}/>
-                <LettersGrid letters={letters} />
+                <LettersGrid letters={letters}/>
 
                 <div className="actions">
                     <Button onClick={handleCheck}>Перевірити</Button>
