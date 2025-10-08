@@ -1,5 +1,6 @@
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
+import {GameHeader} from "../../../widgets/game-header/index.js";
 
 export default function GamePage({onEnd, onHome}) {
     const handleCheck = () => alert('TODO: перевірка відповіді');
@@ -11,11 +12,7 @@ export default function GamePage({onEnd, onHome}) {
     return (
         <Layout>
             <div className="stack">
-                <header className="g-header">
-                    <div className="g-score">Рахунок: <strong>0</strong></div>
-                    <h1 className="g-title">Anagram</h1>
-                    <div className="g-level">Рівень: <strong>1</strong></div>
-                </header>
+                <GameHeader/>
 
                 <div className="g-word" aria-label="поточне слово">
                     _ _ _ _ _ _ _ _
