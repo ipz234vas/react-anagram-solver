@@ -1,7 +1,7 @@
 import Layout from '../../../shared/ui/layout';
 import Button from '../../../shared/ui/button';
 import {GameHeader} from "../../../widgets/game-header";
-import {LettersGrid, WordPlaceholder} from "../../../entities/word";
+import {LettersGrid, WordDisplay, WordPlaceholder} from "../../../entities/word";
 
 export default function GamePage({onEnd, onHome}) {
     const handleCheck = () => alert('TODO: перевірка відповіді');
@@ -15,7 +15,7 @@ export default function GamePage({onEnd, onHome}) {
             <div className="stack">
                 <GameHeader/>
 
-                <WordPlaceholder>_ _ _ _ _ _ _ _</WordPlaceholder>
+                <WordDisplay targetLength={8} currentWord={''}/>
                 <LettersGrid letters={letters} />
 
                 <div className="actions">
