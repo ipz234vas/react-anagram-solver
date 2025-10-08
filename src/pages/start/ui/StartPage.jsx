@@ -1,5 +1,3 @@
-import '../StartPage.css';
-
 export default function StartPage({onStart, onShowRules}) {
     return (
         <div className="center">
