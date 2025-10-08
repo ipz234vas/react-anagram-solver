@@ -9,8 +9,8 @@ function App() {
             {/*    onStart={() => alert("Тут буде перехід до сторінки Game")}*/}
             {/*    onShowRules={() => alert("Правила гри")}*/}
             {/*/>*/}
-            <GamePage/>
-            {/*<ResultsPage/>*/}
+            {/*<GamePage/>*/}
+            <ResultsPage/>
         </>
     )
 }
