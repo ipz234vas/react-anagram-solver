@@ -18,7 +18,7 @@ export default function GamePage({onEnd, onHome}) {
                 <WordPlaceholder>_ _ _ _ _ _ _ _</WordPlaceholder>
                 <LettersGrid letters={letters} />
 
-                <div className="g-actions">
+                <div className="actions">
                     <Button onClick={handleCheck}>Перевірити</Button>
                     <Button onClick={handleEnd}>Завершити гру</Button>
                     <Button variant="secondary" onClick={handleHome}>На головну</Button>
